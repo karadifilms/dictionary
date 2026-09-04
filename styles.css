@@ -82,6 +82,7 @@ main {
 .english {
     font-size: 14px;
     color: #aaa;
+    font-style: italic;
 }
 
 @media (max-width: 600px) {
