@@ -85,5 +85,13 @@
         "english": "Shoulder",
         "date_added": "2026-09-04",
         "tags": ["body"]
+    }, 
+
+    {
+        "kannada": "ಗೆಣಸು", 
+        "tulu": ["ಕೆಳಂಗ್"],
+        "english": "Sweet potato",
+        "date_added": "2026-09-04",
+        "tags": ["food"]
     }
 ]
