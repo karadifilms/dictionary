@@ -32,5 +32,33 @@
         "tulu": ["ಕುಡು"],
         "english": "Horse gram",
         "date_added": "2026-09-04"
+    },
+
+    {
+        "kannada": "ಮನೆಯಲ್ಲಿ", 
+        "tulu": ["ಇಲ್ಲೊಳು"],
+        "english": "In the house",
+        "date_added": "2026-09-04"
+    }, 
+
+    {
+        "kannada": "ನಿಮ್ಮ", 
+        "tulu": ["ಇಂಕ್ಳೆನ", "ನಿಂಕ್ಳೆನ"],
+        "english": "Your (respectful)",
+        "date_added": "2026-09-04"
+    }, 
+
+    {
+        "kannada": "ನಾಳೆ", 
+        "tulu": ["ಎಲ್ಲೆ"],
+        "english": "Tomorrow",
+        "date_added": "2026-09-04"
+    }, 
+
+    {
+        "kannada": "ನಿನ್ನೆ", 
+        "tulu": ["ಕೋಡೆ"],
+        "english": "Yesterday",
+        "date_added": "2026-09-04"
     }
 ]
