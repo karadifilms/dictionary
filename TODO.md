@@ -1,0 +1,2 @@
+- [backend] check data against list of allowed tags and validate.
+- [local-dev] : easy UI to add words quickly.
