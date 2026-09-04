@@ -2,7 +2,7 @@ async function loadDictionary() {
     const dictionaryContainer = document.getElementById("dictionary");
 
     try {
-        const response = await fetch("data.json");
+        const response = await fetch("data.json", {cache: 'no-store'});
 
         if (!response.ok) {
             throw new Error("Could not load data.json");
