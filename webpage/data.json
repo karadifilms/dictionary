@@ -1,97 +1,116 @@
 [
     {
-        "kannada": "ಅನ್ನ", 
-        "tulu": ["ಉಂಪು"],
+        "kannada": "ಅನ್ನ",
+        "tulu": [
+            "ಉಂಪು"
+        ],
         "english": "Cooked rice",
-        "date_added": "2026-09-03",
-        "tags": ["food"]
-    }, 
-
+        "date_added": "2026-09-03"
+    },
     {
-        "kannada": "ಪಲ್ಲ್ಯ", 
-        "tulu": ["ಆಜತ್ನ"],
+        "kannada": "ಪಲ್ಲ್ಯ",
+        "tulu": [
+            "ಆಜತ್ನ"
+        ],
         "english": "Sauted vegetables with tempering",
-        "date_added": "2026-09-03",
-        "tags": ["food"]
-    }, 
-
+        "date_added": "2026-09-03"
+    },
     {
-        "kannada": "ಆಮೆಲೆ", 
-        "tulu": ["ಬೆತ್ತ್"],
+        "kannada": "ಆಮೆಲೆ",
+        "tulu": [
+            "ಬೆತ್ತ್"
+        ],
         "english": "Afterwards",
-        "date_added": "2026-09-03",
-        "tags": ["time"]
-    }, 
- 
+        "date_added": "2026-09-03"
+    },
     {
-        "kannada": "ಮಾಡಿದ್ದು", 
-        "tulu": ["ಮನ್ನ", "ಅಂತ್‌ನ"],
+        "kannada": "ಮಾಡಿದ್ದು",
+        "tulu": [
+            "ಮನ್ನ",
+            "ಅಂತ್‌ನ"
+        ],
         "english": "To have done",
-        "date_added": "2026-09-03",
-        "tags": ["verb"]
+        "date_added": "2026-09-03"
     },
-
     {
-        "kannada": "ಹುರುಳಿ", 
-        "tulu": ["ಕುಡು"],
+        "kannada": "ಹುರುಳಿ",
+        "tulu": [
+            "ಕುಡು"
+        ],
         "english": "Horse gram",
-        "date_added": "2026-09-04",
-        "tags": ["food"]
+        "date_added": "2026-09-04"
     },
-
     {
-        "kannada": "ಮನೆಯಲ್ಲಿ", 
-        "tulu": ["ಇಲ್ಲೊಳು"],
+        "kannada": "ಮನೆಯಲ್ಲಿ",
+        "tulu": [
+            "ಇಲ್ಲೊಳು"
+        ],
         "english": "In the house",
-        "date_added": "2026-09-04",
-        "tags": ["family"]
-    }, 
-
+        "date_added": "2026-09-04"
+    },
     {
-        "kannada": "ನಿಮ್ಮ", 
-        "tulu": ["ಇಂಕ್ಳೆನ", "ನಿಂಕ್ಳೆನ"],
+        "kannada": "ನಿಮ್ಮ",
+        "tulu": [
+            "ಇಂಕ್ಳೆನ",
+            "ನಿಂಕ್ಳೆನ"
+        ],
         "english": "Your (respectful)",
-        "date_added": "2026-09-04",
-        "tags": ["people"]
-    }, 
-
+        "date_added": "2026-09-04"
+    },
     {
-        "kannada": "ನಾಳೆ", 
-        "tulu": ["ಎಲ್ಲೆ"],
+        "kannada": "ನಾಳೆ",
+        "tulu": [
+            "ಎಲ್ಲೆ"
+        ],
         "english": "Tomorrow",
-        "date_added": "2026-09-04",
-        "tags": ["time"]
-    }, 
-
+        "date_added": "2026-09-04"
+    },
     {
-        "kannada": "ನಿನ್ನೆ", 
-        "tulu": ["ಕೋಡೆ"],
+        "kannada": "ನಿನ್ನೆ",
+        "tulu": [
+            "ಕೋಡೆ"
+        ],
         "english": "Yesterday",
-        "date_added": "2026-09-04",
-        "tags": ["time"]
-    }, 
-
+        "date_added": "2026-09-04"
+    },
     {
-        "kannada": "ಕುತ್ತಿಗೆ", 
-        "tulu": ["ಕೆಕ್ಕಿಲ್"],
+        "kannada": "ಕುತ್ತಿಗೆ",
+        "tulu": [
+            "ಕೆಕ್ಕಿಲ್"
+        ],
         "english": "Neck",
-        "date_added": "2026-09-04",
-        "tags": ["body"]
-    }, 
-
+        "date_added": "2026-09-04"
+    },
     {
-        "kannada": "ಬುಜ", 
-        "tulu": ["ಪುಗೆಲ್"],
+        "kannada": "ಬುಜ",
+        "tulu": [
+            "ಪುಗೆಲ್"
+        ],
         "english": "Shoulder",
-        "date_added": "2026-09-04",
-        "tags": ["body"]
-    }, 
-
+        "date_added": "2026-09-04"
+    },
     {
-        "kannada": "ಗೆಣಸು", 
-        "tulu": ["ಕೆಳಂಗ್"],
+        "kannada": "ಗೆಣಸು",
+        "tulu": [
+            "ಕೆಳಂಗ್"
+        ],
         "english": "Sweet potato",
-        "date_added": "2026-09-04",
-        "tags": ["food"]
+        "date_added": "2026-09-04"
+    },
+    {
+        "kannada": "ಹೆಳ್ಬೋದು",
+        "tulu": [
+            "ಪಣೋಳಿ"
+        ],
+        "english": "Can be said",
+        "date_added": "2026-09-04"
+    },
+    {
+        "kannada": "ಮಾಡಿಕೊಳ್ಳುತ್ತೆನೆ",
+        "tulu": [
+            "ಅಂತೋಣುವೆ"
+        ],
+        "english": "Will do for myself",
+        "date_added": "2026-09-04"
     }
 ]
