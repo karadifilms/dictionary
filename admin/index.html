@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin — Tulu Dictionary</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #fafafa;
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+
+        /* ---- Header ---- */
+        header {
+            background: #fff;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 0 32px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 15px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        header h1 span {
+            color: #bbb;
+            font-weight: 400;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        /* ---- Buttons ---- */
+        button {
+            font-family: inherit;
+            font-size: 13px;
+            cursor: pointer;
+            border: none;
+            border-radius: 6px;
+            padding: 7px 14px;
+            transition: opacity 0.15s;
+        }
+
+        button:hover { opacity: 0.8; }
+        button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+        .btn-primary   { background: #1a1a1a; color: #fff; }
+        .btn-secondary { background: #f0f0f0; color: #1a1a1a; }
+        .btn-danger    { background: #fee2e2; color: #b91c1c; }
+        .btn-publish   { background: #dcfce7; color: #15803d; font-weight: 600; }
+
+        /* ---- Add form ---- */
+        .add-form {
+            background: #fff;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 20px 32px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .field label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .field input {
+            font-family: inherit;
+            font-size: 14px;
+            padding: 7px 10px;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            background: #fafafa;
+            color: #1a1a1a;
+            outline: none;
+            width: 180px;
+            transition: border-color 0.15s;
+        }
+
+        .field input:focus { border-color: #1a1a1a; background: #fff; }
+        .field input.date-field { width: 140px; }
+
+        /* ---- Toast ---- */
+        #toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+            z-index: 100;
+        }
+
+        #toast.show { opacity: 1; }
+        #toast.success { background: #1a1a1a; color: #fff; }
+        #toast.error   { background: #b91c1c; color: #fff; }
+
+        /* ---- Main content ---- */
+        main {
+            max-width: 1000px;
+            margin: 28px auto;
+            padding: 0 32px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+        }
+
+        .word-count {
+            font-size: 12px;
+            color: #bbb;
+        }
+
+        /* ---- Word table ---- */
+        .day-group { margin-bottom: 36px; }
+
+        .day-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #bbb;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 2px;
+        }
+
+        .word-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.5fr 100px;
+            align-items: center;
+            gap: 16px;
+            padding: 13px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .word-row:last-child { border-bottom: none; }
+
+        .col-kannada { font-size: 15px; color: #555; }
+        .col-tulu    { font-size: 16px; font-weight: 600; }
+        .col-english { font-size: 13px; color: #aaa; font-style: italic; }
+
+        .row-actions {
+            display: flex;
+            gap: 6px;
+            justify-content: flex-end;
+        }
+
+        .btn-icon {
+            background: none;
+            border: none;
+            padding: 4px 6px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            color: #aaa;
+            transition: background 0.15s, color 0.15s;
+        }
+
+        .btn-icon:hover { background: #f0f0f0; color: #1a1a1a; }
+        .btn-icon.danger:hover { background: #fee2e2; color: #b91c1c; }
+
+        /* ---- Modal ---- */
+        .modal-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.25);
+            z-index: 50;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-backdrop.open { display: flex; }
+
+        .modal {
+            background: #fff;
+            border-radius: 10px;
+            padding: 28px;
+            width: 440px;
+            max-width: 90vw;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal h2 {
+            margin: 0 0 20px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .modal .fields { display: flex; flex-direction: column; gap: 14px; }
+
+        .modal .field input { width: 100%; }
+
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-top: 24px;
+        }
+
+        /* ---- History ---- */
+        .history-entry {
+            padding: 10px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .history-entry:last-child { border-bottom: none; }
+
+        .history-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+
+        .history-badge {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 2px 7px;
+            border-radius: 4px;
+        }
+
+        .badge-create { background: #dcfce7; color: #15803d; }
+        .badge-update { background: #dbeafe; color: #1d4ed8; }
+        .badge-delete { background: #fee2e2; color: #b91c1c; }
+
+        .history-date { font-size: 12px; color: #bbb; }
+
+        .history-values {
+            font-size: 13px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tulu Dictionary <span>/ admin</span></h1>
+    <div class="header-actions">
+        <button class="btn-secondary" onclick="exportJSON()">Export JSON</button>
+        <button class="btn-publish" onclick="publish()">Publish →</button>
+    </div>
+</header>
+
+<!-- Add word form -->
+<div class="add-form">
+    <div class="field">
+        <label>Kannada</label>
+        <input id="f-kannada" type="text" placeholder="ಅನ್ನ" autocomplete="off">
+    </div>
+    <div class="field">
+        <label>Tulu</label>
+        <input id="f-tulu" type="text" placeholder="ಉಂಪು, ..." autocomplete="off">
+    </div>
+    <div class="field">
+        <label>English</label>
+        <input id="f-english" type="text" placeholder="cooked rice" autocomplete="off">
+    </div>
+    <div class="field">
+        <label>Date</label>
+        <input id="f-date" type="date" class="date-field">
+    </div>
+    <button class="btn-primary" onclick="addWord()">Add word</button>
+</div>
+
+<main>
+    <div class="section-header">
+        <span class="word-count" id="word-count"></span>
+    </div>
+    <div id="word-list"></div>
+</main>
+
+<!-- Edit modal -->
+<div class="modal-backdrop" id="edit-modal">
+    <div class="modal">
+        <h2>Edit word</h2>
+        <div class="fields">
+            <div class="field">
+                <label>Kannada</label>
+                <input id="e-kannada" type="text" autocomplete="off">
+            </div>
+            <div class="field">
+                <label>Tulu</label>
+                <input id="e-tulu" type="text" autocomplete="off">
+            </div>
+            <div class="field">
+                <label>English</label>
+                <input id="e-english" type="text" autocomplete="off">
+            </div>
+            <div class="field">
+                <label>Date</label>
+                <input id="e-date" type="date">
+            </div>
+        </div>
+        <div class="modal-actions">
+            <button class="btn-secondary" onclick="closeModal('edit-modal')">Cancel</button>
+            <button class="btn-primary" onclick="saveEdit()">Save</button>
+        </div>
+    </div>
+</div>
+
+<!-- History modal -->
+<div class="modal-backdrop" id="history-modal">
+    <div class="modal">
+        <h2 id="history-title">History</h2>
+        <div id="history-list"></div>
+        <div class="modal-actions">
+            <button class="btn-secondary" onclick="closeModal('history-modal')">Close</button>
+        </div>
+    </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+    let words = [];
+    let editingId = null;
+
+    // ---- Init ----
+
+    document.getElementById("f-date").value = today();
+
+    document.querySelectorAll(".add-form input").forEach(input => {
+        input.addEventListener("keydown", e => { if (e.key === "Enter") addWord(); });
+    });
+
+    loadWords();
+
+    // ---- Helpers ----
+
+    function today() {
+        return new Date().toLocaleDateString("en-CA"); // YYYY-MM-DD in local time
+    }
+
+    function toast(msg, type = "success") {
+        const el = document.getElementById("toast");
+        el.textContent = msg;
+        el.className = `show ${type}`;
+        setTimeout(() => { el.className = ""; }, 2500);
+    }
+
+    function formatDate(str) {
+        const [y, m, d] = str.split("-").map(Number);
+        return new Date(y, m - 1, d).toLocaleDateString("en-US", {
+            year: "numeric", month: "long", day: "numeric"
+        });
+    }
+
+    function closeModal(id) {
+        document.getElementById(id).classList.remove("open");
+    }
+
+    document.querySelectorAll(".modal-backdrop").forEach(el => {
+        el.addEventListener("click", e => {
+            if (e.target === el) el.classList.remove("open");
+        });
+    });
+
+    // ---- Load & render ----
+
+    async function loadWords() {
+        const res = await fetch("/api/words");
+        words = await res.json();
+        render();
+    }
+
+    function render() {
+        const container = document.getElementById("word-list");
+        document.getElementById("word-count").textContent =
+            `${words.length} word${words.length !== 1 ? "s" : ""}`;
+
+        const byDate = {};
+        words.forEach(w => {
+            (byDate[w.date_added] = byDate[w.date_added] || []).push(w);
+        });
+
+        container.innerHTML = "";
+        Object.entries(byDate).forEach(([date, group]) => {
+            const section = document.createElement("div");
+            section.className = "day-group";
+            section.innerHTML = `<div class="day-label">${formatDate(date)}</div>`;
+
+            group.forEach(w => {
+                const row = document.createElement("div");
+                row.className = "word-row";
+                row.innerHTML = `
+                    <div class="col-kannada">${w.kannada}</div>
+                    <div class="col-tulu">${w.tulu.join(", ")}</div>
+                    <div class="col-english">${w.english}</div>
+                    <div class="row-actions">
+                        <button class="btn-icon" title="History" onclick="showHistory(${w.id}, '${w.tulu.join(", ")}')">⏱</button>
+                        <button class="btn-icon" title="Edit" onclick="openEdit(${w.id})">✏️</button>
+                        <button class="btn-icon danger" title="Delete" onclick="deleteWord(${w.id})">✕</button>
+                    </div>
+                `;
+                section.appendChild(row);
+            });
+
+            container.appendChild(section);
+        });
+    }
+
+    // ---- Add ----
+
+    async function addWord() {
+        const tulu    = document.getElementById("f-tulu").value.trim();
+        const kannada = document.getElementById("f-kannada").value.trim();
+        const english = document.getElementById("f-english").value.trim();
+        const date    = document.getElementById("f-date").value;
+
+        if (!tulu || !kannada || !english) {
+            toast("Fill in all fields", "error");
+            return;
+        }
+
+        const res = await fetch("/api/words", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                tulu:       tulu.split(",").map(s => s.trim()).filter(Boolean),
+                kannada,
+                english,
+                date_added: date || today(),
+            }),
+        });
+
+        if (!res.ok) { toast("Failed to add", "error"); return; }
+
+        const word = await res.json();
+        words.unshift(word);
+        render();
+
+        document.getElementById("f-tulu").value    = "";
+        document.getElementById("f-kannada").value = "";
+        document.getElementById("f-english").value = "";
+        document.getElementById("f-date").value    = today();
+        document.getElementById("f-tulu").focus();
+
+        toast("Word added");
+    }
+
+    // ---- Edit ----
+
+    function openEdit(id) {
+        const w = words.find(x => x.id === id);
+        if (!w) return;
+        editingId = id;
+        document.getElementById("e-tulu").value    = w.tulu.join(", ");
+        document.getElementById("e-kannada").value = w.kannada;
+        document.getElementById("e-english").value = w.english;
+        document.getElementById("e-date").value    = w.date_added;
+        document.getElementById("edit-modal").classList.add("open");
+    }
+
+    async function saveEdit() {
+        const tulu    = document.getElementById("e-tulu").value.trim();
+        const kannada = document.getElementById("e-kannada").value.trim();
+        const english = document.getElementById("e-english").value.trim();
+        const date    = document.getElementById("e-date").value;
+
+        const res = await fetch(`/api/words/${editingId}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                tulu:       tulu.split(",").map(s => s.trim()).filter(Boolean),
+                kannada,
+                english,
+                date_added: date,
+            }),
+        });
+
+        if (!res.ok) { toast("Failed to save", "error"); return; }
+
+        const updated = await res.json();
+        words = words.map(w => w.id === editingId ? updated : w);
+        render();
+        closeModal("edit-modal");
+        toast("Saved");
+    }
+
+    // ---- Delete ----
+
+    async function deleteWord(id) {
+        const w = words.find(x => x.id === id);
+        if (!confirm(`Delete "${w?.tulu.join(", ")}"?`)) return;
+
+        const res = await fetch(`/api/words/${id}`, { method: "DELETE" });
+        if (!res.ok) { toast("Failed to delete", "error"); return; }
+
+        words = words.filter(w => w.id !== id);
+        render();
+        toast("Deleted");
+    }
+
+    // ---- History ----
+
+    async function showHistory(id, label) {
+        const res = await fetch(`/api/words/${id}/history`);
+        const history = await res.json();
+
+        document.getElementById("history-title").textContent = `History — ${label}`;
+
+        const list = document.getElementById("history-list");
+        list.innerHTML = history.length === 0
+            ? "<p style='color:#bbb;font-size:13px'>No history yet.</p>"
+            : history.map(h => `
+                <div class="history-entry">
+                    <div class="history-meta">
+                        <span class="history-badge badge-${h.change_type}">${h.change_type}</span>
+                        <span class="history-date">${new Date(h.changed_at).toLocaleString()}</span>
+                    </div>
+                    <div class="history-values">
+                        ${h.tulu.join(", ")} · ${h.kannada} · ${h.english}
+                    </div>
+                </div>
+            `).join("");
+
+        document.getElementById("history-modal").classList.add("open");
+    }
+
+    // ---- Export / Publish ----
+
+    async function exportJSON() {
+        const btn = event.target;
+        btn.disabled = true;
+        const res = await fetch("/api/export", { method: "POST" });
+        const data = await res.json();
+        btn.disabled = false;
+        toast(data.success ? `Exported ${data.count} words` : "Export failed",
+              data.success ? "success" : "error");
+    }
+
+    async function publish() {
+        const btn = event.target;
+        btn.disabled = true;
+        btn.textContent = "Publishing…";
+        const res = await fetch("/api/publish", { method: "POST" });
+        const data = await res.json();
+        btn.disabled = false;
+        btn.textContent = "Publish →";
+        toast(data.success ? "Published ✓" : `Publish failed: ${data.output}`,
+              data.success ? "success" : "error");
+    }
+</script>
+
+</body>
+</html>
