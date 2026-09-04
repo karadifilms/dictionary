@@ -40,16 +40,6 @@ def init_db():
             created_at  DATETIME DEFAULT CURRENT_TIMESTAMP,
             updated_at  DATETIME DEFAULT CURRENT_TIMESTAMP
         );
-
-        CREATE TABLE IF NOT EXISTS word_history (
-            id          INTEGER PRIMARY KEY AUTOINCREMENT,
-            word_id     INTEGER NOT NULL REFERENCES words(id),
-            kannada     TEXT,
-            tulu        TEXT,
-            english     TEXT,
-            changed_at  DATETIME DEFAULT CURRENT_TIMESTAMP,
-            change_type TEXT CHECK(change_type IN ('create', 'update', 'delete'))
-        );
     """)
     conn.commit()
 
@@ -132,14 +122,10 @@ def add_word(word: WordIn):
         (kannada, tulu, english, date_added),
     )
     word_id = cur.lastrowid
-    conn.execute(
-        "INSERT INTO word_history (word_id, kannada, tulu, english, change_type) "
-        "VALUES (?, ?, ?, ?, 'create')",
-        (word_id, kannada, tulu, english),
-    )
     conn.commit()
     created = conn.execute("SELECT * FROM words WHERE id = ?", (word_id,)).fetchone()
     conn.close()
+    export_json()
     return row_to_dict(created)
 
 
@@ -161,14 +147,10 @@ def update_word(word_id: int, word: WordIn):
         "updated_at=CURRENT_TIMESTAMP WHERE id=?",
         (kannada, tulu, english, date_added, word_id),
     )
-    conn.execute(
-        "INSERT INTO word_history (word_id, kannada, tulu, english, change_type) "
-        "VALUES (?, ?, ?, ?, 'update')",
-        (word_id, kannada, tulu, english),
-    )
     conn.commit()
     updated = conn.execute("SELECT * FROM words WHERE id = ?", (word_id,)).fetchone()
     conn.close()
+    export_json()
     return row_to_dict(updated)
 
 
@@ -180,33 +162,11 @@ def delete_word(word_id: int):
         conn.close()
         raise HTTPException(status_code=404, detail="Word not found")
 
-    conn.execute(
-        "INSERT INTO word_history (word_id, kannada, tulu, english, change_type) "
-        "VALUES (?, ?, ?, ?, 'delete')",
-        (word_id, word["kannada"], word["tulu"], word["english"]),
-    )
     conn.execute("DELETE FROM words WHERE id = ?", (word_id,))
     conn.commit()
     conn.close()
+    export_json()
     return {"success": True}
-
-
-@app.get("/api/words/{word_id}/history")
-def word_history(word_id: int):
-    conn = get_db()
-    rows = conn.execute(
-        "SELECT * FROM word_history WHERE word_id = ? ORDER BY changed_at DESC",
-        (word_id,),
-    ).fetchall()
-    conn.close()
-    return [{
-        "id":          r["id"],
-        "kannada":     r["kannada"],
-        "tulu":        json.loads(r["tulu"]) if r["tulu"] else [],
-        "english":     r["english"],
-        "changed_at":  r["changed_at"],
-        "change_type": r["change_type"],
-    } for r in rows]
 
 
 # ---------------------------------------------------------------------------
@@ -245,8 +205,9 @@ def publish():
 
     steps = [
         ["git", "add", "webpage/data.json"],
+        ["git", "add", "server/dictionary.db"],
         ["git", "commit", "-m", "feat(data): more words"],
-        ["git", "push"],
+        ["git", "push", "origin", "main"],
     ]
 
     output_lines = []

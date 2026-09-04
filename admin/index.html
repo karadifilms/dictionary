@@ -233,40 +233,6 @@
             margin-top: 24px;
         }
 
-        /* ---- History ---- */
-        .history-entry {
-            padding: 10px 0;
-            border-bottom: 1px solid #f5f5f5;
-        }
-
-        .history-entry:last-child { border-bottom: none; }
-
-        .history-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 4px;
-        }
-
-        .history-badge {
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            padding: 2px 7px;
-            border-radius: 4px;
-        }
-
-        .badge-create { background: #dcfce7; color: #15803d; }
-        .badge-update { background: #dbeafe; color: #1d4ed8; }
-        .badge-delete { background: #fee2e2; color: #b91c1c; }
-
-        .history-date { font-size: 12px; color: #bbb; }
-
-        .history-values {
-            font-size: 13px;
-            color: #555;
-        }
     </style>
 </head>
 <body>
@@ -332,17 +298,6 @@
         <div class="modal-actions">
             <button class="btn-secondary" onclick="closeModal('edit-modal')">Cancel</button>
             <button class="btn-primary" onclick="saveEdit()">Save</button>
-        </div>
-    </div>
-</div>
-
-<!-- History modal -->
-<div class="modal-backdrop" id="history-modal">
-    <div class="modal">
-        <h2 id="history-title">History</h2>
-        <div id="history-list"></div>
-        <div class="modal-actions">
-            <button class="btn-secondary" onclick="closeModal('history-modal')">Close</button>
         </div>
     </div>
 </div>
@@ -425,7 +380,6 @@
                     <div class="col-tulu">${w.tulu.join(", ")}</div>
                     <div class="col-english">${w.english}</div>
                     <div class="row-actions">
-                        <button class="btn-icon" title="History" onclick="showHistory(${w.id}, '${w.tulu.join(", ")}')">⏱</button>
                         <button class="btn-icon" title="Edit" onclick="openEdit(${w.id})">✏️</button>
                         <button class="btn-icon danger" title="Delete" onclick="deleteWord(${w.id})">✕</button>
                     </div>
@@ -527,32 +481,6 @@
         words = words.filter(w => w.id !== id);
         render();
         toast("Deleted");
-    }
-
-    // ---- History ----
-
-    async function showHistory(id, label) {
-        const res = await fetch(`/api/words/${id}/history`);
-        const history = await res.json();
-
-        document.getElementById("history-title").textContent = `History — ${label}`;
-
-        const list = document.getElementById("history-list");
-        list.innerHTML = history.length === 0
-            ? "<p style='color:#bbb;font-size:13px'>No history yet.</p>"
-            : history.map(h => `
-                <div class="history-entry">
-                    <div class="history-meta">
-                        <span class="history-badge badge-${h.change_type}">${h.change_type}</span>
-                        <span class="history-date">${new Date(h.changed_at).toLocaleString()}</span>
-                    </div>
-                    <div class="history-values">
-                        ${h.tulu.join(", ")} · ${h.kannada} · ${h.english}
-                    </div>
-                </div>
-            `).join("");
-
-        document.getElementById("history-modal").classList.add("open");
     }
 
     // ---- Export / Publish ----
