@@ -4,99 +4,133 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f7f5f0;
-    color: #222;
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #fff;
+    color: #1a1a1a;
 }
 
 header {
-    background: #ffffff;
-    padding: 24px;
+    padding: 52px 40px 44px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #ddd;
+    gap: 16px;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 header h1 {
     margin: 0;
-    font-size: 32px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 .header-photo {
-    width: 100px;
-    height: 100px;
+    width: 72px;
+    height: 72px;
     object-fit: cover;
     border-radius: 50%;
 }
 
 main {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 0 20px;
+    max-width: 800px;
+    margin: 52px auto;
+    padding: 0 40px;
 }
 
 .day-group {
-    margin-bottom: 28px;
+    margin-bottom: 48px;
 }
 
 .day-date {
-    font-size: 13px;
-    font-weight: bold;
-    color: #999;
+    font-size: 11px;
+    font-weight: 600;
+    color: #bbb;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 8px;
+    letter-spacing: 0.08em;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 4px;
 }
 
 .word {
-    background: white;
-    padding: 18px 20px;
-    margin-bottom: 12px;
-    border-radius: 8px;
-    border: 1px solid #e2e2e2;
+    padding: 16px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.word:last-child {
+    border-bottom: none;
 }
 
 .word-row {
     display: grid;
     grid-template-columns: 1fr 1fr 1.5fr;
-    gap: 20px;
-    align-items: center;
+    gap: 24px;
+    align-items: baseline;
 }
 
 .kannada {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 18px;
+    color: #444;
 }
 
 .tulu {
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .english {
-    color: #555;
+    font-size: 14px;
+    color: #aaa;
 }
 
 @media (max-width: 600px) {
     header {
-        padding: 18px;
+        padding: 40px max(24px, env(safe-area-inset-left)) 32px;
     }
 
     header h1 {
-        font-size: 24px;
+        font-size: 19px;
     }
 
     .header-photo {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
+    }
+
+    main {
+        margin: 32px auto;
+        padding: 0 max(20px, env(safe-area-inset-left));
+    }
+
+    .day-group {
+        margin-bottom: 36px;
+    }
+
+    .word {
+        padding: 18px 0;
     }
 
     .word-row {
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .tulu {
+        order: -1;
+        font-size: 20px;
+    }
+
+    .kannada {
+        order: 0;
+        font-size: 14px;
+        color: #888;
     }
 
     .english {
-        grid-column: 1 / -1;
+        order: 1;
+        font-size: 13px;
+        color: #bbb;
     }
 }

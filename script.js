@@ -17,13 +17,22 @@ async function loadDictionary() {
             return groups;
         }, {});
 
-        Object.entries(byDate).forEach(([date, group]) => {
+        function formatDate(dateStr) {
+            const [year, month, day] = dateStr.split("-").map(Number);
+            return new Date(year, month - 1, day).toLocaleDateString("en-US", {
+                year: "numeric", month: "long", day: "numeric"
+            });
+        }
+
+        const sortedEntries = Object.entries(byDate).sort(([a], [b]) => b.localeCompare(a));
+
+        sortedEntries.forEach(([date, group]) => {
             const groupElement = document.createElement("div");
             groupElement.className = "day-group";
 
             const dateHeader = document.createElement("div");
             dateHeader.className = "day-date";
-            dateHeader.textContent = date;
+            dateHeader.textContent = formatDate(date);
             groupElement.appendChild(dateHeader);
 
             group.forEach(word => {
