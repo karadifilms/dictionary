@@ -5,7 +5,10 @@
             "ಉಂಪು"
         ],
         "english": "Cooked rice",
-        "date_added": "2026-09-03"
+        "date_added": "2026-09-03",
+        "tags": [
+            "food"
+        ]
     },
     {
         "kannada": "ಪಲ್ಲ್ಯ",
@@ -13,7 +16,10 @@
             "ಅಜತ್ನ"
         ],
         "english": "Sauted vegetables with tempering",
-        "date_added": "2026-09-03"
+        "date_added": "2026-09-03",
+        "tags": [
+            "food"
+        ]
     },
     {
         "kannada": "ಆಮೆಲೆ",
@@ -21,7 +27,10 @@
             "ಬೆತ್ತ್"
         ],
         "english": "Afterwards",
-        "date_added": "2026-09-03"
+        "date_added": "2026-09-03",
+        "tags": [
+            "time"
+        ]
     },
     {
         "kannada": "ಮಾಡಿದ್ದು",
@@ -30,7 +39,10 @@
             "ಅಂತ್‌ನ"
         ],
         "english": "To have done",
-        "date_added": "2026-09-03"
+        "date_added": "2026-09-03",
+        "tags": [
+            "verb"
+        ]
     },
     {
         "kannada": "ಹುರುಳಿ",
@@ -38,7 +50,10 @@
             "ಕುಡು"
         ],
         "english": "Horse gram",
-        "date_added": "2026-09-04"
+        "date_added": "2026-09-04",
+        "tags": [
+            "food"
+        ]
     },
     {
         "kannada": "ಮನೆಯಲ್ಲಿ",
@@ -46,7 +61,10 @@
             "ಇಲ್ಲೊಳು"
         ],
         "english": "In the house",
-        "date_added": "2026-09-04"
+        "date_added": "2026-09-04",
+        "tags": [
+            "place"
+        ]
     },
     {
         "kannada": "ನಿಮ್ಮ",
@@ -55,7 +73,10 @@
             "ನಿಂಕ್ಳೆನ"
         ],
         "english": "Your (respectful)",
-        "date_added": "2026-09-04"
+        "date_added": "2026-09-04",
+        "tags": [
+            "people"
+        ]
     },
     {
         "kannada": "ನಾಳೆ",
@@ -63,7 +84,10 @@
             "ಎಲ್ಲೆ"
         ],
         "english": "Tomorrow",
-        "date_added": "2026-09-04"
+        "date_added": "2026-09-04",
+        "tags": [
+            "time"
+        ]
     },
     {
         "kannada": "ನಿನ್ನೆ",
@@ -71,7 +95,10 @@
             "ಕೋಡೆ"
         ],
         "english": "Yesterday",
-        "date_added": "2026-09-04"
+        "date_added": "2026-09-04",
+        "tags": [
+            "time"
+        ]
     },
     {
         "kannada": "ಕುತ್ತಿಗೆ",
@@ -79,7 +106,10 @@
             "ಕೆಕ್ಕಿಲ್"
         ],
         "english": "Neck",
-        "date_added": "2026-09-04"
+        "date_added": "2026-09-04",
+        "tags": [
+            "body"
+        ]
     },
     {
         "kannada": "ಬುಜ",
@@ -87,7 +117,10 @@
             "ಪುಗೆಲ್"
         ],
         "english": "Shoulder",
-        "date_added": "2026-09-04"
+        "date_added": "2026-09-04",
+        "tags": [
+            "body"
+        ]
     },
     {
         "kannada": "ಗೆಣಸು",
@@ -95,7 +128,10 @@
             "ಕೆಳಂಗ್"
         ],
         "english": "Sweet potato",
-        "date_added": "2026-09-04"
+        "date_added": "2026-09-04",
+        "tags": [
+            "food"
+        ]
     },
     {
         "kannada": "ಹೇಳ್ಬೋದು",
@@ -103,7 +139,10 @@
             "ಪಣೋಳಿ"
         ],
         "english": "Can be said",
-        "date_added": "2026-09-04"
+        "date_added": "2026-09-04",
+        "tags": [
+            "verb"
+        ]
     },
     {
         "kannada": "ಮಾಡಿಕೊಳ್ಳುತ್ತೆನೆ",
@@ -111,6 +150,20 @@
             "ಅಂತೋಣುವೆ"
         ],
         "english": "Will do for myself",
-        "date_added": "2026-09-04"
+        "date_added": "2026-09-04",
+        "tags": [
+            "verb"
+        ]
+    },
+    {
+        "kannada": "ಎರೆಯುವುದು",
+        "tulu": [
+            "ಮಾಸುಣ"
+        ],
+        "english": "To pour (ritualistic)",
+        "date_added": "2026-09-05",
+        "tags": [
+            "worship"
+        ]
     }
 ]
