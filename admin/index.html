@@ -160,7 +160,7 @@
 
         .word-row {
             display: grid;
-            grid-template-columns: 1fr 1fr 1.5fr 100px;
+            grid-template-columns: 1fr 1fr 1.5fr 1fr 100px;
             align-items: center;
             gap: 16px;
             padding: 13px 0;
@@ -172,6 +172,7 @@
         .col-kannada { font-size: 15px; color: #555; }
         .col-tulu    { font-size: 16px; font-weight: 600; }
         .col-english { font-size: 13px; color: #aaa; font-style: italic; }
+        .col-tags    { font-size: 12px; color: #bbb; }
 
         .row-actions {
             display: flex;
@@ -263,6 +264,10 @@
         <label>Date</label>
         <input id="f-date" type="date" class="date-field">
     </div>
+    <div class="field">
+        <label>Tags</label>
+        <input id="f-tags" type="text" placeholder="food, verb, ..." autocomplete="off">
+    </div>
     <button class="btn-primary" onclick="addWord()">Add word</button>
 </div>
 
@@ -293,6 +298,10 @@
             <div class="field">
                 <label>Date</label>
                 <input id="e-date" type="date">
+            </div>
+            <div class="field">
+                <label>Tags</label>
+                <input id="e-tags" type="text" autocomplete="off">
             </div>
         </div>
         <div class="modal-actions">
@@ -379,6 +388,7 @@
                     <div class="col-kannada">${w.kannada}</div>
                     <div class="col-tulu">${w.tulu.join(", ")}</div>
                     <div class="col-english">${w.english}</div>
+                    <div class="col-tags">${w.tags.join(", ")}</div>
                     <div class="row-actions">
                         <button class="btn-icon" title="Edit" onclick="openEdit(${w.id})">✏️</button>
                         <button class="btn-icon danger" title="Delete" onclick="deleteWord(${w.id})">✕</button>
@@ -398,6 +408,7 @@
         const kannada = document.getElementById("f-kannada").value.trim();
         const english = document.getElementById("f-english").value.trim();
         const date    = document.getElementById("f-date").value;
+        const tags    = document.getElementById("f-tags").value.trim();
 
         if (!tulu || !kannada || !english) {
             toast("Fill in all fields", "error");
@@ -412,6 +423,7 @@
                 kannada,
                 english,
                 date_added: date || today(),
+                tags:       tags.split(",").map(s => s.trim()).filter(Boolean),
             }),
         });
 
@@ -425,6 +437,7 @@
         document.getElementById("f-kannada").value = "";
         document.getElementById("f-english").value = "";
         document.getElementById("f-date").value    = today();
+        document.getElementById("f-tags").value    = "";
         document.getElementById("f-tulu").focus();
 
         toast("Word added");
@@ -440,6 +453,7 @@
         document.getElementById("e-kannada").value = w.kannada;
         document.getElementById("e-english").value = w.english;
         document.getElementById("e-date").value    = w.date_added;
+        document.getElementById("e-tags").value    = w.tags.join(", ");
         document.getElementById("edit-modal").classList.add("open");
     }
 
@@ -448,6 +462,7 @@
         const kannada = document.getElementById("e-kannada").value.trim();
         const english = document.getElementById("e-english").value.trim();
         const date    = document.getElementById("e-date").value;
+        const tags    = document.getElementById("e-tags").value.trim();
 
         const res = await fetch(`/api/words/${editingId}`, {
             method: "PUT",
@@ -457,6 +472,7 @@
                 kannada,
                 english,
                 date_added: date,
+                tags:       tags.split(",").map(s => s.trim()).filter(Boolean),
             }),
         });
 

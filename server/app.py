@@ -37,6 +37,7 @@ def init_db():
             tulu        TEXT NOT NULL,
             english     TEXT NOT NULL,
             date_added  TEXT NOT NULL,
+            tags        TEXT NOT NULL DEFAULT '[]',
             created_at  DATETIME DEFAULT CURRENT_TIMESTAMP,
             updated_at  DATETIME DEFAULT CURRENT_TIMESTAMP
         );
@@ -50,9 +51,10 @@ def init_db():
             words = json.load(f)
         for w in words:
             tulu = json.dumps(w["tulu"], ensure_ascii=False)
+            tags = json.dumps(w.get("tags", []), ensure_ascii=False)
             conn.execute(
-                "INSERT INTO words (kannada, tulu, english, date_added) VALUES (?, ?, ?, ?)",
-                (w["kannada"], tulu, w["english"], w["date_added"]),
+                "INSERT INTO words (kannada, tulu, english, date_added, tags) VALUES (?, ?, ?, ?, ?)",
+                (w["kannada"], tulu, w["english"], w["date_added"], tags),
             )
         conn.commit()
         print(f"Seeded {len(words)} words from data.json")
@@ -67,6 +69,7 @@ def row_to_dict(r):
         "tulu":       json.loads(r["tulu"]),
         "english":    r["english"],
         "date_added": r["date_added"],
+        "tags":       json.loads(r["tags"]),
         "created_at": r["created_at"],
         "updated_at": r["updated_at"],
     }
@@ -81,6 +84,7 @@ class WordIn(BaseModel):
     tulu:       list[str]
     english:    str
     date_added: str | None = None
+    tags:       list[str] = []
 
 
 # ---------------------------------------------------------------------------
@@ -115,11 +119,12 @@ def add_word(word: WordIn):
     tulu       = json.dumps([t.strip() for t in word.tulu], ensure_ascii=False)
     english    = word.english.strip()
     date_added = word.date_added or date.today().isoformat()
+    tags       = json.dumps([t.strip() for t in word.tags], ensure_ascii=False)
 
     conn = get_db()
     cur = conn.execute(
-        "INSERT INTO words (kannada, tulu, english, date_added) VALUES (?, ?, ?, ?)",
-        (kannada, tulu, english, date_added),
+        "INSERT INTO words (kannada, tulu, english, date_added, tags) VALUES (?, ?, ?, ?, ?)",
+        (kannada, tulu, english, date_added, tags),
     )
     word_id = cur.lastrowid
     conn.commit()
@@ -141,11 +146,12 @@ def update_word(word_id: int, word: WordIn):
     tulu       = json.dumps([t.strip() for t in word.tulu], ensure_ascii=False)
     english    = word.english.strip() if word.english else old["english"]
     date_added = word.date_added or old["date_added"]
+    tags       = json.dumps([t.strip() for t in word.tags], ensure_ascii=False)
 
     conn.execute(
-        "UPDATE words SET kannada=?, tulu=?, english=?, date_added=?, "
+        "UPDATE words SET kannada=?, tulu=?, english=?, date_added=?, tags=?, "
         "updated_at=CURRENT_TIMESTAMP WHERE id=?",
-        (kannada, tulu, english, date_added, word_id),
+        (kannada, tulu, english, date_added, tags, word_id),
     )
     conn.commit()
     updated = conn.execute("SELECT * FROM words WHERE id = ?", (word_id,)).fetchone()
@@ -186,6 +192,7 @@ def export_json():
         "tulu":       json.loads(r["tulu"]),
         "english":    r["english"],
         "date_added": r["date_added"],
+        "tags":       json.loads(r["tags"]),
     } for r in rows]
 
     with open(DATA_JSON_PATH, "w", encoding="utf-8") as f:
