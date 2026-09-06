@@ -167,14 +167,58 @@
         ]
     },
     {
-        "kannada": "ಕೊಡ್ತಿನಿ",
+        "kannada": "ಕೊಡುತ್ತೇನೆ",
         "tulu": [
             "ಕೊಳ್ಪೆ"
         ],
-        "english": "Will give",
+        "english": "I will give",
         "date_added": "2026-09-06",
         "tags": [
             "verb"
+        ]
+    },
+    {
+        "kannada": "ಮದುಮಗಳು",
+        "tulu": [
+            "ಮದಿಮಾಳ್"
+        ],
+        "english": "Bride",
+        "date_added": "2026-09-06",
+        "tags": [
+            "marriage"
+        ]
+    },
+    {
+        "kannada": "ಮದುಮಗ",
+        "tulu": [
+            "ಮದಿಮಾಯೆ"
+        ],
+        "english": "Groom",
+        "date_added": "2026-09-06",
+        "tags": [
+            "marriage"
+        ]
+    },
+    {
+        "kannada": "ಬರುತ್ತಿದೆ",
+        "tulu": [
+            "ಬರೋಂತುಂಡು"
+        ],
+        "english": "Is coming",
+        "date_added": "2026-09-06",
+        "tags": [
+            "verb"
+        ]
+    },
+    {
+        "kannada": "ಇರಬಹುದು",
+        "tulu": [
+            "ಇಪ್ಪು"
+        ],
+        "english": "Could be",
+        "date_added": "2026-09-06",
+        "tags": [
+            "common"
         ]
     }
 ]
