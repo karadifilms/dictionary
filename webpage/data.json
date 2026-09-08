@@ -220,5 +220,98 @@
         "tags": [
             "common"
         ]
+    },
+    {
+        "kannada": "ಹೇಳಿ",
+        "tulu": [
+            "ಪಣ್‌ತ್"
+        ],
+        "english": "Having said",
+        "date_added": "2026-09-06",
+        "tags": [
+            "verb"
+        ]
+    },
+    {
+        "kannada": "ಮನೆಗೆ",
+        "tulu": [
+            "ಇಲ್ಲಗ್"
+        ],
+        "english": "To home",
+        "date_added": "2026-09-06",
+        "tags": [
+            "place",
+            "doubt"
+        ]
+    },
+    {
+        "kannada": "ಆಗ್ಲಿಕ್ಕಿಲ್ಲ",
+        "tulu": [
+            "ಆವಾನ್"
+        ],
+        "english": "Not likely to happen",
+        "date_added": "2026-09-07",
+        "tags": [
+            "time",
+            "common"
+        ]
+    },
+    {
+        "kannada": "ಸಿಗುವಣ",
+        "tulu": [
+            "ಸಿಕ್ಕ್‌ಗ"
+        ],
+        "english": "Let's meet",
+        "date_added": "2026-09-08",
+        "tags": [
+            "verb",
+            "people"
+        ]
+    },
+    {
+        "kannada": "ಇದ್ದಾಳೆ",
+        "tulu": [
+            "ಉಳ್ಳಾಳ್"
+        ],
+        "english": "She's there",
+        "date_added": "2026-09-08",
+        "tags": [
+            "people"
+        ]
+    },
+    {
+        "kannada": "ಇರಬೇಕು",
+        "tulu": [
+            "ಇಪ್ಪೊಡು"
+        ],
+        "english": "Should be",
+        "date_added": "2026-09-08",
+        "tags": [
+            "common"
+        ]
+    },
+    {
+        "kannada": "ಇಟ್ಟಳು",
+        "tulu": [
+            "ಇಜಿಯಾಳ್"
+        ],
+        "english": "She kept it",
+        "date_added": "2026-09-08",
+        "tags": [
+            "people",
+            "verb"
+        ]
+    },
+    {
+        "kannada": "ತೆಗೆದು",
+        "tulu": [
+            "ಗೆತ್‌ದ್"
+        ],
+        "english": "After removing",
+        "date_added": "2026-09-08",
+        "tags": [
+            "verb",
+            "doubt"
+        ]
     }
 ]
