@@ -141,13 +141,14 @@
         "english": "Can be said",
         "date_added": "2026-09-04",
         "tags": [
-            "verb"
+            "verb",
+            "doubt"
         ]
     },
     {
         "kannada": "ಮಾಡಿಕೊಳ್ಳುತ್ತೆನೆ",
         "tulu": [
-            "ಅಂತೋಣುವೆ"
+            "ಅಂತೊಣುವೆ"
         ],
         "english": "Will do for myself",
         "date_added": "2026-09-04",
@@ -247,7 +248,7 @@
     {
         "kannada": "ಆಗ್ಲಿಕ್ಕಿಲ್ಲ",
         "tulu": [
-            "ಆವಾನ್"
+            "ಆವನ್"
         ],
         "english": "Not likely to happen",
         "date_added": "2026-09-07",
@@ -312,6 +313,96 @@
         "tags": [
             "verb",
             "doubt"
+        ]
+    },
+    {
+        "kannada": "ಆಚೆ",
+        "tulu": [
+            "ಅಂಚಿ"
+        ],
+        "english": "That side",
+        "date_added": "2026-09-12",
+        "tags": [
+            "place"
+        ]
+    },
+    {
+        "kannada": "ಈಚೆ",
+        "tulu": [
+            "ಇಂಚಿ"
+        ],
+        "english": "This side",
+        "date_added": "2026-09-12",
+        "tags": [
+            "place"
+        ]
+    },
+    {
+        "kannada": "ಮಾಸುವುದು",
+        "tulu": [
+            "ಮಾಜುಣ"
+        ],
+        "english": "To fade away",
+        "date_added": "2026-09-12",
+        "tags": [
+            "verb"
+        ]
+    },
+    {
+        "kannada": "ಕಡುಬು",
+        "tulu": [
+            "ಅಡ್ಯೆ"
+        ],
+        "english": "Steamed dumpling (Traditional)",
+        "date_added": "2026-09-12",
+        "tags": [
+            "food"
+        ]
+    },
+    {
+        "kannada": "ಕರೆದುಕೊಂಡು",
+        "tulu": [
+            "ಒಳೆತೊಂತು"
+        ],
+        "english": "To take (person/animal)",
+        "date_added": "2026-09-12",
+        "tags": [
+            "verb",
+            "doubt"
+        ]
+    },
+    {
+        "kannada": "ತೆಗೆದುಕೊಂಡು",
+        "tulu": [
+            "ಗೆತೊಂತು"
+        ],
+        "english": "To take (non-living)",
+        "date_added": "2026-09-12",
+        "tags": [
+            "verb",
+            "doubt"
+        ]
+    },
+    {
+        "kannada": "ಮೇಲೆ",
+        "tulu": [
+            "ಮಿತ್"
+        ],
+        "english": "Above",
+        "date_added": "2026-09-12",
+        "tags": [
+            "place"
+        ]
+    },
+    {
+        "kannada": "ಕೆಳಗೆ",
+        "tulu": [
+            "ಸಿರ್ತ್"
+        ],
+        "english": "Below",
+        "date_added": "2026-09-12",
+        "tags": [
+            "place"
         ]
     }
 ]
