@@ -404,5 +404,115 @@
         "tags": [
             "place"
         ]
+    },
+    {
+        "kannada": "ಒಂದು",
+        "tulu": [
+            "ಒಂಜಿ"
+        ],
+        "english": "One",
+        "date_added": "2026-10-01",
+        "tags": [
+            "number"
+        ]
+    },
+    {
+        "kannada": "ಎರಡು",
+        "tulu": [
+            "ಎರಡ್"
+        ],
+        "english": "Two",
+        "date_added": "2026-10-01",
+        "tags": [
+            "number"
+        ]
+    },
+    {
+        "kannada": "ಮೂರು",
+        "tulu": [
+            "ಮೂಜಿ"
+        ],
+        "english": "Three",
+        "date_added": "2026-10-01",
+        "tags": [
+            "number"
+        ]
+    },
+    {
+        "kannada": "ನಾಕು",
+        "tulu": [
+            "ನಾಲ್"
+        ],
+        "english": "Four",
+        "date_added": "2026-10-01",
+        "tags": [
+            "number"
+        ]
+    },
+    {
+        "kannada": "ಐದು",
+        "tulu": [
+            "ಐನ್"
+        ],
+        "english": "Five",
+        "date_added": "2026-10-01",
+        "tags": [
+            "number"
+        ]
+    },
+    {
+        "kannada": "ಆರು",
+        "tulu": [
+            "ಆಜಿ"
+        ],
+        "english": "Six",
+        "date_added": "2026-10-01",
+        "tags": [
+            "number"
+        ]
+    },
+    {
+        "kannada": "ಏಳು",
+        "tulu": [
+            "ಏಳ್"
+        ],
+        "english": "Seven",
+        "date_added": "2026-10-01",
+        "tags": [
+            "number"
+        ]
+    },
+    {
+        "kannada": "ಎಂಟು",
+        "tulu": [
+            "ಎನ್ಮ"
+        ],
+        "english": "Eight",
+        "date_added": "2026-10-01",
+        "tags": [
+            "number"
+        ]
+    },
+    {
+        "kannada": "ಒಂಬತ್ತು",
+        "tulu": [
+            "ಒರುಂಬ"
+        ],
+        "english": "Nine",
+        "date_added": "2026-10-01",
+        "tags": [
+            "number"
+        ]
+    },
+    {
+        "kannada": "ಹತ್ತು",
+        "tulu": [
+            "ಪತ್ತ್"
+        ],
+        "english": "Ten",
+        "date_added": "2026-10-01",
+        "tags": [
+            "number"
+        ]
     }
 ]
