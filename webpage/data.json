@@ -683,7 +683,7 @@
     {
         "kannada": "ಹೇಳುವುದು",
         "tulu": [
-            "ಪಂಣ್‌ಪುಣ"
+            "ಪಣ್‌ಪುಣ"
         ],
         "english": "To tell",
         "date_added": "2026-10-03",
@@ -699,7 +699,8 @@
         "english": "To Teach",
         "date_added": "2026-10-03",
         "tags": [
-            "verb"
+            "verb",
+            "doubt"
         ]
     },
     {
@@ -722,6 +723,19 @@
         "date_added": "2026-10-03",
         "tags": [
             "verb"
+        ]
+    },
+    {
+        "kannada": "ತಿನ್ನುವುದು",
+        "tulu": [
+            "ತಿನ್‌ಪುಣ"
+        ],
+        "english": "To Eat",
+        "date_added": "2026-10-03",
+        "tags": [
+            "verb",
+            "food",
+            "doubt"
         ]
     }
 ]
