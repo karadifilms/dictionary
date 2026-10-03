@@ -637,17 +637,6 @@
         ]
     },
     {
-        "kannada": "ಸಂಜೆ",
-        "tulu": [
-            "ಬಯ್ಯ"
-        ],
-        "english": "Evening",
-        "date_added": "2026-10-03",
-        "tags": [
-            "time"
-        ]
-    },
-    {
         "kannada": "ಅಣ್ಣ",
         "tulu": [
             "ಪಳಯೆ"
@@ -689,6 +678,39 @@
         "date_added": "2026-10-03",
         "tags": [
             "relationship"
+        ]
+    },
+    {
+        "kannada": "ಹೇಳುವುದು",
+        "tulu": [
+            "ಪಂಣ್‌ಪುಣ"
+        ],
+        "english": "To tell",
+        "date_added": "2026-10-03",
+        "tags": [
+            "verb"
+        ]
+    },
+    {
+        "kannada": "ಕಲಿಸುವುದು",
+        "tulu": [
+            "ಕಲೆಪುಣ"
+        ],
+        "english": "To Teach",
+        "date_added": "2026-10-03",
+        "tags": [
+            "verb"
+        ]
+    },
+    {
+        "kannada": "ಕೊಡುವುದು",
+        "tulu": [
+            "ಕೊಳ್‌ಪುಣ"
+        ],
+        "english": "To Give",
+        "date_added": "2026-10-03",
+        "tags": [
+            "verb"
         ]
     }
 ]
