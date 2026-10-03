@@ -514,5 +514,181 @@
         "tags": [
             "number"
         ]
+    },
+    {
+        "kannada": "ಬೆಳ್ಳಿಗ್ಗೆ",
+        "tulu": [
+            "ಬೊಕ್ಷರೆ"
+        ],
+        "english": "Morning",
+        "date_added": "2026-10-03",
+        "tags": [
+            "time"
+        ]
+    },
+    {
+        "kannada": "ಎಲೆ",
+        "tulu": [
+            "ಇರೆ"
+        ],
+        "english": "Leaf",
+        "date_added": "2026-10-03",
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "kannada": "ಹಾಕುವುದಕ್ಕೆ",
+        "tulu": [
+            "ಪಾಡ್ಯರೆ"
+        ],
+        "english": "To put",
+        "date_added": "2026-10-03",
+        "tags": [
+            "verb"
+        ]
+    },
+    {
+        "kannada": "ಮಳೆ",
+        "tulu": [
+            "ಬರ್ಷ"
+        ],
+        "english": "Rain",
+        "date_added": "2026-10-03",
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "kannada": "ನದಿ",
+        "tulu": [
+            "ತುದೆ"
+        ],
+        "english": "River",
+        "date_added": "2026-10-03",
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "kannada": "ಪುಷ್ಪ",
+        "tulu": [
+            "ಪುಷ್ಪ"
+        ],
+        "english": "Flower",
+        "date_added": "2026-10-03",
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "kannada": "ಕಷ್ಟ",
+        "tulu": [
+            "ಬಂಗ"
+        ],
+        "english": "Difficult",
+        "date_added": "2026-10-03",
+        "tags": [
+            "adjective"
+        ]
+    },
+    {
+        "kannada": "ನೋವು",
+        "tulu": [
+            "ನ್‌ಡ್"
+        ],
+        "english": "Pain",
+        "date_added": "2026-10-03",
+        "tags": [
+            "noun"
+        ]
+    },
+    {
+        "kannada": "ಹೋರಿ",
+        "tulu": [
+            "ಬೋರಿ"
+        ],
+        "english": "Bull",
+        "date_added": "2026-10-03",
+        "tags": [
+            "animal"
+        ]
+    },
+    {
+        "kannada": "ನೊಣ",
+        "tulu": [
+            "ಕೆಲಂಜಿ"
+        ],
+        "english": "House Fly",
+        "date_added": "2026-10-03",
+        "tags": [
+            "insect"
+        ]
+    },
+    {
+        "kannada": "ಸಂಜೆ",
+        "tulu": [
+            "ಬಯ್ಯ"
+        ],
+        "english": "Evening",
+        "date_added": "2026-10-03",
+        "tags": [
+            "time"
+        ]
+    },
+    {
+        "kannada": "ಸಂಜೆ",
+        "tulu": [
+            "ಬಯ್ಯ"
+        ],
+        "english": "Evening",
+        "date_added": "2026-10-03",
+        "tags": [
+            "time"
+        ]
+    },
+    {
+        "kannada": "ಅಣ್ಣ",
+        "tulu": [
+            "ಪಳಯೆ"
+        ],
+        "english": "Elder Brother",
+        "date_added": "2026-10-03",
+        "tags": [
+            "relationship"
+        ]
+    },
+    {
+        "kannada": "ತಮ್ಮ",
+        "tulu": [
+            "ಮೆಗ್ಗ್ಯೆ"
+        ],
+        "english": "Younger Brother",
+        "date_added": "2026-10-03",
+        "tags": [
+            "relationship"
+        ]
+    },
+    {
+        "kannada": "ಅಕ್ಕ",
+        "tulu": [
+            "ಪಳಿ"
+        ],
+        "english": "Elder Sister",
+        "date_added": "2026-10-03",
+        "tags": [
+            "relationship"
+        ]
+    },
+    {
+        "kannada": "ತಂಗಿ",
+        "tulu": [
+            "ಮೆಗ್ದಿ"
+        ],
+        "english": "Younger Sister",
+        "date_added": "2026-10-03",
+        "tags": [
+            "relationship"
+        ]
     }
 ]
