@@ -694,13 +694,12 @@
     {
         "kannada": "ಕಲಿಸುವುದು",
         "tulu": [
-            "ಕಲೆಪುಣ"
+            "ಕಲ್‌ಪುಣ"
         ],
         "english": "To Teach",
         "date_added": "2026-10-03",
         "tags": [
-            "verb",
-            "doubt"
+            "verb"
         ]
     },
     {
@@ -734,8 +733,18 @@
         "date_added": "2026-10-03",
         "tags": [
             "verb",
-            "food",
-            "doubt"
+            "food"
+        ]
+    },
+    {
+        "kannada": "ಅವತ್ತು",
+        "tulu": [
+            "ಆನಿ"
+        ],
+        "english": "That Day",
+        "date_added": "2026-10-04",
+        "tags": [
+            "time"
         ]
     }
 ]
