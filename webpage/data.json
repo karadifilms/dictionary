@@ -746,5 +746,152 @@
         "tags": [
             "time"
         ]
+    },
+    {
+        "kannada": "ಮೊನ್ನೆ",
+        "tulu": [
+            "ಮುಣನಿ"
+        ],
+        "english": "Day Before Yesterday",
+        "date_added": "2026-11-06",
+        "tags": [
+            "time"
+        ]
+    },
+    {
+        "kannada": "ಬೃಹತ್",
+        "tulu": [
+            "ನೇಲ್ಯ"
+        ],
+        "english": "Huge",
+        "date_added": "2026-11-06",
+        "tags": [
+            "adjective"
+        ]
+    },
+    {
+        "kannada": "ಗೊತ್ತಿರಲಿಲ್ಲ",
+        "tulu": [
+            "ಗೊತ್ತಿತ್‌ತ್ರಿ",
+            "ಗೊತ್ತಿದ್ದಿಯನ್"
+        ],
+        "english": "Didn't Know",
+        "date_added": "2026-11-06",
+        "tags": [
+            "doubt",
+            "verb"
+        ]
+    },
+    {
+        "kannada": "ಗೃಹಪ್ರವೇಶ ಜೊತೆಗಾರ್ತಿ",
+        "tulu": [
+            "ಪೆರಂಟೆ",
+            "ಕುರುಂಟು"
+        ],
+        "english": "Bride Companion To Groom's House",
+        "date_added": "2026-11-06",
+        "tags": [
+            "noun"
+        ]
+    },
+    {
+        "kannada": "ಹಿಟ್ಟು",
+        "tulu": [
+            "ಬಂದ"
+        ],
+        "english": "Batter",
+        "date_added": "2026-11-06",
+        "tags": [
+            "food"
+        ]
+    },
+    {
+        "kannada": "ಕಷ್ಟ",
+        "tulu": [
+            "ಬಂಗ"
+        ],
+        "english": "Difficult",
+        "date_added": "2026-11-06",
+        "tags": [
+            "adjective"
+        ]
+    },
+    {
+        "kannada": "ಸೌತೆಕಾಯಿ",
+        "tulu": [
+            "ಕೆಕ್ಕರ್ಪೆ"
+        ],
+        "english": "Cucumber",
+        "date_added": "2026-11-06",
+        "tags": [
+            "food"
+        ]
+    },
+    {
+        "kannada": "ಅಕ್ಕಿ",
+        "tulu": [
+            "ಅರಿ"
+        ],
+        "english": "Rice",
+        "date_added": "2026-11-06",
+        "tags": [
+            "food"
+        ]
+    },
+    {
+        "kannada": "ಹಗಲು",
+        "tulu": [
+            "ಪಗೆಲ್"
+        ],
+        "english": "Daytime",
+        "date_added": "2026-11-06",
+        "tags": [
+            "time"
+        ]
+    },
+    {
+        "kannada": "ಒಬ್ಬ",
+        "tulu": [
+            "ಒರಿ"
+        ],
+        "english": "A Man",
+        "date_added": "2026-11-06",
+        "tags": [
+            "people"
+        ]
+    },
+    {
+        "kannada": "ಒಬ್ಬಳು",
+        "tulu": [
+            "ಒರ್ತಿ"
+        ],
+        "english": "A Woman",
+        "date_added": "2026-11-06",
+        "tags": [
+            "people"
+        ]
+    },
+    {
+        "kannada": "ರುಬ್ಬಿದ ಖಾರ",
+        "tulu": [
+            "ಅರೆಪು"
+        ],
+        "english": "Ground Coconut Based Gravy",
+        "date_added": "2026-11-06",
+        "tags": [
+            "food"
+        ]
+    },
+    {
+        "kannada": "ಬಿಡಿಸುವುದು",
+        "tulu": [
+            "ಬುಡ್ಪೊಪುಣ"
+        ],
+        "english": "To Make Someone Leave",
+        "date_added": "2026-11-06",
+        "tags": [
+            "verb",
+            "doubt"
+        ]
     }
 ]
