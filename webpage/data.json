@@ -893,5 +893,73 @@
             "verb",
             "doubt"
         ]
+    },
+    {
+        "kannada": "ಯವಗ",
+        "tulu": [
+            "ಎಪಳ್"
+        ],
+        "english": "When",
+        "date_added": "2026-11-06",
+        "tags": [
+            "time",
+            "doubt"
+        ]
+    },
+    {
+        "kannada": "ಅವಗ",
+        "tulu": [
+            "ಅಪಳ್"
+        ],
+        "english": "That Time",
+        "date_added": "2026-11-06",
+        "tags": [
+            "time"
+        ]
+    },
+    {
+        "kannada": "ಒಟ್ಟಿಗೆ",
+        "tulu": [
+            "ಒಟ್ಟುಗು"
+        ],
+        "english": "Together",
+        "date_added": "2026-11-06",
+        "tags": [
+            "adverb"
+        ]
+    },
+    {
+        "kannada": "ಮರೆಯುವುದು",
+        "tulu": [
+            "ಮದಪುಣ"
+        ],
+        "english": "To Forget",
+        "date_added": "2026-11-06",
+        "tags": [
+            "verb"
+        ]
+    },
+    {
+        "kannada": "ಹೇಗಿದ್ದರು",
+        "tulu": [
+            "ಎಂತು"
+        ],
+        "english": "Anyway",
+        "date_added": "2026-11-06",
+        "tags": [
+            "adverb"
+        ]
+    },
+    {
+        "kannada": "ನುಂಗುವುದು",
+        "tulu": [
+            "ನಿಂಗುಣ"
+        ],
+        "english": "To Swallow",
+        "date_added": "2026-11-06",
+        "tags": [
+            "verb",
+            "doubt"
+        ]
     }
 ]
