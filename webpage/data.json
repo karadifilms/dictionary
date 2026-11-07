@@ -961,5 +961,105 @@
             "verb",
             "doubt"
         ]
+    },
+    {
+        "kannada": "ಕಂಬಳಿ ಹುಳ",
+        "tulu": [
+            "ಕಂಬೊಳಿ ಪುಳಿ"
+        ],
+        "english": "Caterpillar",
+        "date_added": "2026-11-06",
+        "tags": [
+            "insect"
+        ]
+    },
+    {
+        "kannada": "ಮಿಂಚುಳ",
+        "tulu": [
+            "ಮಿನ್ನಂಪುಳಿ"
+        ],
+        "english": "Fire Fly",
+        "date_added": "2026-11-07",
+        "tags": [
+            "insect"
+        ]
+    },
+    {
+        "kannada": "ಚೇಳು",
+        "tulu": [
+            "ಕೊಂಬಚೇಳು"
+        ],
+        "english": "Scorpion",
+        "date_added": "2026-11-07",
+        "tags": [
+            "insect"
+        ]
+    },
+    {
+        "kannada": "ತಿಗಣೆ",
+        "tulu": [
+            "ಉಂಬುಳು"
+        ],
+        "english": "Leech",
+        "date_added": "2026-11-07",
+        "tags": [
+            "insect"
+        ]
+    },
+    {
+        "kannada": "ಚೇರಂಟೆ",
+        "tulu": [
+            "ಚೇರಂಟೆ"
+        ],
+        "english": "Millipede",
+        "date_added": "2026-11-07",
+        "tags": [
+            "insect"
+        ]
+    },
+    {
+        "kannada": "ಗಂಡಹುಳು",
+        "tulu": [
+            "ಬಂಜಿ ಪುಳಿ"
+        ],
+        "english": "Roundworm",
+        "date_added": "2026-11-07",
+        "tags": [
+            "insect"
+        ]
+    },
+    {
+        "kannada": "ಪಟ್ಟೆಪುಳಿ",
+        "tulu": [
+            "ರೇಷ್ಮೆಹುಳು"
+        ],
+        "english": "Silkworm",
+        "date_added": "2026-11-07",
+        "tags": [
+            "insect"
+        ]
+    },
+    {
+        "kannada": "ಚಟ್ಟೆ ಬಸವನಹುಳು",
+        "tulu": [
+            "ಅಂಟ್ ಪುಳಿ"
+        ],
+        "english": "Slug",
+        "date_added": "2026-11-07",
+        "tags": [
+            "insect"
+        ]
+    },
+    {
+        "kannada": "ಬಸವನಹುಳು",
+        "tulu": [
+            "ಸುಳೆ ಪುಳಿ"
+        ],
+        "english": "Snail",
+        "date_added": "2026-11-07",
+        "tags": [
+            "insect",
+            "doubt"
+        ]
     }
 ]
