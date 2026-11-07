@@ -1061,5 +1061,27 @@
             "insect",
             "doubt"
         ]
+    },
+    {
+        "kannada": "ತುಂಬಿಸುವುದು",
+        "tulu": [
+            "ಇಂಜೊಪುಣ"
+        ],
+        "english": "To Fill",
+        "date_added": "2026-11-07",
+        "tags": [
+            "verb"
+        ]
+    },
+    {
+        "kannada": "ಬಿಸಿಲು",
+        "tulu": [
+            "ದೆಂಬು"
+        ],
+        "english": "Sunlight",
+        "date_added": "2026-11-07",
+        "tags": [
+            "nature"
+        ]
     }
 ]
