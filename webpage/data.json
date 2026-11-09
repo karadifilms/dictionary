@@ -1098,11 +1098,11 @@
         ]
     },
     {
-        "kannada": "ಒಂದು ಬಾರಿ",
+        "kannada": "ಬಾರಿ",
         "tulu": [
-            "ಒಂಜಿ ಸರ್ತಿ"
+            "ಸರ್ತಿ"
         ],
-        "english": "One Time",
+        "english": "Turn / Times (It's a one \"time\" job)",
         "date_added": "2026-11-09",
         "tags": [
             "time"
