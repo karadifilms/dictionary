@@ -1094,5 +1094,94 @@
         "tags": [
             "verb"
         ]
+    },
+    {
+        "kannada": "ಒಂದು ಬಾರಿ",
+        "tulu": [
+            "ಒಂಜಿ ಸರ್ತಿ"
+        ],
+        "english": "One Time",
+        "date_added": "2026-11-09",
+        "tags": [
+            "time"
+        ]
+    },
+    {
+        "kannada": "ಇಲ್ಲ",
+        "tulu": [
+            "ಇದ್ದಿ"
+        ],
+        "english": "Not There / No",
+        "date_added": "2026-11-09",
+        "tags": [
+            "verb"
+        ]
+    },
+    {
+        "kannada": "ಅಲ್ಲ",
+        "tulu": [
+            "ಅತ್ತ್"
+        ],
+        "english": "No / Incorrect",
+        "date_added": "2026-11-09",
+        "tags": [
+            "verb"
+        ]
+    },
+    {
+        "kannada": "ಇರಲಿಲ್ಲ",
+        "tulu": [
+            "ಇತ್ತ್‌ತ್ರಿ",
+            "ಇದ್ದಿಯನ್"
+        ],
+        "english": "Was Not There",
+        "date_added": "2026-11-09",
+        "tags": [
+            "verb"
+        ]
+    },
+    {
+        "kannada": "ಆದುದರಿಂದ",
+        "tulu": [
+            "ಅಂಚತಾವರ"
+        ],
+        "english": "Because Of That",
+        "date_added": "2026-11-09",
+        "tags": [
+            "conjunction"
+        ]
+    },
+    {
+        "kannada": "ನನ್ನಿಂದ",
+        "tulu": [
+            "ಎನ್ನತ್ತಾವರ"
+        ],
+        "english": "Because Of Me",
+        "date_added": "2026-11-09",
+        "tags": [
+            "conjunction"
+        ]
+    },
+    {
+        "kannada": "ಮಡಚುವುದು",
+        "tulu": [
+            "ಮಡಿಪುಣ"
+        ],
+        "english": "To Fold",
+        "date_added": "2026-11-09",
+        "tags": [
+            "verb"
+        ]
+    },
+    {
+        "kannada": "ಬರಲಿ",
+        "tulu": [
+            "ಬರಡ್"
+        ],
+        "english": "Let It Come",
+        "date_added": "2026-11-09",
+        "tags": [
+            "verb"
+        ]
     }
 ]
