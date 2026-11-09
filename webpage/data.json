@@ -1111,7 +1111,7 @@
         "tulu": [
             "ಇದ್ದಿ"
         ],
-        "english": "Not There / No",
+        "english": "Not There",
         "date_added": "2026-11-09",
         "tags": [
             "verb"
@@ -1170,7 +1170,8 @@
         "english": "To Fold",
         "date_added": "2026-11-09",
         "tags": [
-            "verb"
+            "verb",
+            "doubt"
         ]
     },
     {
