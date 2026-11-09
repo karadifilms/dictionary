@@ -1184,5 +1184,16 @@
         "tags": [
             "verb"
         ]
+    },
+    {
+        "kannada": "ಎಂದು",
+        "tulu": [
+            "ಅಂದ್"
+        ],
+        "english": "That (he said \"that\" he will come)",
+        "date_added": "2026-11-09",
+        "tags": [
+            "conjunction"
+        ]
     }
 ]
